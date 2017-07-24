@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-recipe-edit',
@@ -14,7 +14,7 @@ editMode = false;
   ngOnInit() {
    this.route.params
    .subscribe(
-   (params) => {
+   (params: Params) => {
     this.id = + params['id'];
      this.editMode = params['id'] != null;
        }
