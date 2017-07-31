@@ -22,6 +22,9 @@ private subscription: Subscription;
     }
               )
   }
+    onEditItem(index: number) {
+      this.slService.startedEditing.next(index);
+    }
     ngOnDestroy() {
     this.subscription.unsubscribe();
 }
